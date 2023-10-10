@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codelab 1</title>
+</head>
+<body>
+    <h1>PENJUMLAHAN BILANGAN</h1>
+    <form id="plus-form">
+        <label>Bilangan Pertama: </label>
+        <input type="number" name="first" id="first">
+        <label>Bilangan Kedua: </label>
+        <input type="number" name="second" id="second">
+        <br><br>
+        <button id="plus">Jumlahkan</button>
+        <button type="reset">Ulang</button>
+    </form>
+    <script>
+        const form = document.querySelector('#plus-form');
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+            let first = parseInt(form.elements['first'].value);
+            let second = parseInt(form.elements['second'].value);
+            alert('Hasil Penjumlahan: ' + (first + second));
+        });
+    </script>
+</body>
+</html>
